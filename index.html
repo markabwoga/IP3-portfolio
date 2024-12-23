@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body >
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li class="closemenu" onclick=hideSidebar()><a href="#"><img src="closes.png" alt="" height="26" width="26"></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="cotacts.html">Contacts</a></li>
+                <li><a id="theme" href="#"><img src="light_mode.png" alt="" height="26" width="26"></a></li>
+            </ul>
+            <ul>
+                <li ><a href="#">DevsCrib!!</a></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="Projects.html">Projects</a></li>
+                <li class="hideOnMobile"><a href="contacts.html">Contacts</a></li>
+                <li class="hideOnMobile" onclick=changeTheme()><a href="#"><img src="light_mode.png" alt="" height="26" width="26"></a></li>
+                <li class="menubutton" onclick=showSidebar()><a href="#">=</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <section> 
+            <button class="toggle">mode</button>
+            <div class="infodiv">
+                <img class="profile" src="" alt="">
+                <h1>Mark Abwoga</h1>
+                <h3>Field of Study: <span>Software Developer.</span></h3>
+                <p>Welcome to my portfolio, am a liberal person, always ready to learn and improve myself in terms of skills and how I interact with people around me. I am builing this in the hopes that I interact and build good relationship with those that have been and still are in this same field of work before me, for we all know that the path to becoming an expert as a dev requires determination, endurance and a lot of practice and one should never be afraid to fail several times as my mentor puts it. </p>
+            </div>
+            <div class="btndiv">
+                <button class="infobtn">follow</button>
+                <button class="infobtn">contacts</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="wraper">
+            <div class="item item1">t</div>
+            <div class="item item2">r</div>
+            <div class="item item3">p</div>
+            <div class="item item4">c</div>
+            <div class="item item5">v</div>
+            <div class="item item6">m</div>
+            <div class="item item7">z</div>
+            <div class="item item8">q</div>
+        </div>
+    </footer>
+   <script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    };
+
+
+
+    let darkMode = localStorage.getItem('.darkMode')
+    const toggle = document.querySelector('.toggle');
+
+    const enableDarkMode = () => {
+        document.body.classList.add('darkMode');
+        localStorage.setItem('darkMode', 'active')
+    };
+    const removeDarkMode = () => {
+        document.body.classList.remove('darkMode');
+        localStorage.setItem('.darkMode', none);
+
+    };
+
+    if(darkMode === "ative") enableDarkMode();
+
+    toggle.addEventListener("click",()=>{
+        darkMode = localStorage.getItem('.darkMode');
+
+        darkMode !=="active" ? enableDarkMode() : removeDarkMode()
+         
+    });
+
+   </script>  
+</body>
+</html>
