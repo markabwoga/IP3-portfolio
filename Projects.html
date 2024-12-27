@@ -5,10 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="stylesheet" href="Projects.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="index.html">home</a>
-    <h1>Projects</h1>
+    <header>
+        <nav>
+            <ul class="sidebar">
+                <li class="closemenu" onclick=hideSidebar()><a href="#"><img src="closes.png" alt="" height="26" width="26"></a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="project.html">Projects</a></li>
+                <li><a href="cotacts.html">Contacts</a></li>
+                <li><a id="theme" href="#"><img src="light_mode.png" alt="" height="26" width="26"></a></li>
+            </ul>
+            <ul>
+                <li ><a href="#">DevsCrib!!</a></li>
+                <li class="hideOnMobile"><a href="#">Home</a></li>
+                <li class="hideOnMobile"><a href="about.html">About</a></li>
+                <li class="hideOnMobile"><a href="Projects.html">Projects</a></li>
+                <li class="hideOnMobile"><a href="contacts.html">Contacts</a></li>
+                <li class="hideOnMobile" onclick=changeTheme()><button class="toggle">Mode</button></li>
+                <li class="menubutton" onclick=showSidebar()><a href="#">=</a></li>
+            </ul>
+        </nav>
+
+    </header>
     <main>
         <section>
             <h1>Completed Projects</h1>
@@ -78,5 +99,41 @@
     </main>
 
     </div>
+    
+   <script>
+    function showSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex'
+    }
+    function hideSidebar(){
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none'
+    };
+
+
+
+    let darkMode = localStorage.getItem('.darkMode')
+    const toggle = document.querySelector('.toggle');
+
+    const enableDarkMode = () => {
+        document.body.classList.add('darkMode');
+        localStorage.setItem('darkMode', 'active')
+    };
+    const removeDarkMode = () => {
+        document.body.classList.remove('darkMode');
+        localStorage.setItem('darkMode', null);
+
+    };
+
+    if(darkMode === "ative") enableDarkMode();
+
+    toggle.addEventListener("click",()=>{
+        darkMode = localStorage.getItem('.darkMode');
+
+        darkMode !=="active" ? enableDarkMode() : removeDarkMode()
+         
+    });
+
+   </script>  
 </body>
 </html>

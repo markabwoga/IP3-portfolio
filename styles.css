@@ -3,11 +3,13 @@
     margin: 0;
 }
 :root{
-    --base-color: white;
-    --text-color: black;
-    --nav-color: rgb(137, 133, 133);
+    --base-color: rgb(246, 240, 240);
+    --text-color: rgb(61, 59, 59);
+    --nav-color: rgb(190, 186, 186);
     --item-color: aquamarine;
-    --nav-basecolor: rgba(206, 202, 202, 0.963);
+    --nav-basecolor:  rgba(120, 142, 104, 0.751);
+    --nav-hover: rgb(99, 105, 99);
+    
 }
 
 .darkMode{
@@ -15,20 +17,21 @@
     --text-color: white;
     --nav-color: rgb(247, 237, 237);
     --item-color: rgb(205, 231, 222);
-    --nav-basecolor: rgba(56, 53, 53, 0.963);
+    --nav-basecolor: rgb(43, 52, 43);
+    --nav-hover: rgb(96, 107, 96);
 }
 body{
     min-height: 100vh;
     font-family: 'Lucida Sans', 'Lucida Sans Regular';
    /* background:  linear-gradient( rgb(116, 129, 116), rgb(255, 255, 255));*/
-    color: white;
-    background-color: gray;
+    color: var(--text-color);
+    background-color: var(--base-color);
     background-repeat: no-repeat;
     background-size: cover;
     font-weight: 400;
 }
 nav{
-    background-color: rgba(21, 44, 3, 0.751);
+    background-color: var(--nav-basecolor);
     height: 80px;
     line-height: 80px;
 }
@@ -45,15 +48,15 @@ nav li{
 nav a{
     height: 100%;
     padding: 0 30px;
-    color: white;
+    color: var(--text-color);
     display: flex;
     align-items: center;
     text-decoration: none;
 }
 nav a:hover{
-    background-color: yellow;
+    background-color: var(--nav-hover);
     cursor: pointer;
-    color: black;
+    color: var(--text-color);
 }
 nav li:first-child{
     margin-right: auto;
@@ -64,10 +67,10 @@ nav li:first-child{
     right: 0;
     height: 100vh;
     width: 250px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: var(--base-color);
     backdrop-filter: blur(10px);
     z-index: 999;
-    box-shadow: -10px 0 10px rgb(93, 92, 92);
+    box-shadow: -10px 0 10px var(--text-color);
     display: none;
     flex-direction: column;
     justify-content: flex-start;
@@ -112,7 +115,7 @@ nav li:first-child{
     width: 200px;
     height: 100px;
     border-radius: 7px;
-    background-color: var(--item-color);
+   /* background-color: var(--item-color);*/
     position: absolute;
     left: 100%;
     animation-name: scrollleft;
@@ -157,7 +160,7 @@ nav li:first-child{
 
 }
 .infodiv h1, h3{
-    color: yellow;
+    color: var(--nav-basecolor);
     margin-bottom: 20px;
 }
 
@@ -186,7 +189,7 @@ nav li:first-child{
 .footermain{
     display: flex;
     margin: 30px;
-    color: white;
+    color: var(--text-color);
 }
 .footerdiv{
     margin: 10px;

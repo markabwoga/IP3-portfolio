@@ -3,6 +3,24 @@
     padding: 0;
     box-sizing: border-box;
 }
+:root{
+    --base-color: rgb(246, 240, 240);
+    --text-color: rgb(61, 59, 59);
+    --nav-color: rgb(190, 186, 186);
+    --item-color: aquamarine;
+    --nav-basecolor:  rgba(120, 142, 104, 0.751);
+    --nav-hover: rgb(99, 105, 99);
+    
+}
+
+.darkMode{
+    --base-color: black;
+    --text-color: white;
+    --nav-color: rgb(247, 237, 237);
+    --item-color: rgb(205, 231, 222);
+    --nav-basecolor: rgb(43, 52, 43);
+    --nav-hover: rgb(96, 107, 96);
+}
 body{
   
 }

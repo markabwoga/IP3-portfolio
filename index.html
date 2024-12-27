@@ -23,7 +23,7 @@
                 <li class="hideOnMobile"><a href="about.html">About</a></li>
                 <li class="hideOnMobile"><a href="Projects.html">Projects</a></li>
                 <li class="hideOnMobile"><a href="contacts.html">Contacts</a></li>
-                <li class="hideOnMobile" onclick=changeTheme()><a href="#"><img src="light_mode.png" alt="" height="26" width="26"></a></li>
+                <li class="hideOnMobile" onclick=changeTheme()><button class="toggle">Mode</button></li>
                 <li class="menubutton" onclick=showSidebar()><a href="#">=</a></li>
             </ul>
         </nav>
@@ -31,7 +31,7 @@
     </header>
     <main>
         <section> 
-            <button class="toggle">mode</button>
+            
             <div class="infodiv">
                 <img class="profile" src="pictures/IMG_20220703_170936.jpg" alt="">
                 <h1>Mark Abwoga</h1>
@@ -46,14 +46,14 @@
     </main>
     <footer>
         <div class="wraper">
-            <div class="item item1">t</div>
-            <div class="item item2">r</div>
-            <div class="item item3">p</div>
-            <div class="item item4">c</div>
-            <div class="item item5">v</div>
-            <div class="item item6">m</div>
-            <div class="item item7">z</div>
-            <div class="item item8">q</div>
+            <div class="item item1">html/css practice</div>
+            <div class="item item2">javascript familiarity</div>
+            <div class="item item3">version control</div>
+            <div class="item item4">working with github</div>
+            <div class="item item5">not practicing react yet</div>
+            <div class="item item6">long way to go</div>
+            <div class="item item7">certified not</div>
+            <div class="item item8">God bless</div>
         </div>
     </footer>
     <footer class="footermain">
@@ -96,7 +96,7 @@
     };
     const removeDarkMode = () => {
         document.body.classList.remove('darkMode');
-        localStorage.setItem('.darkMode', none);
+        localStorage.setItem('.darkMode', null);
 
     };
 
