@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <li><a href="#">work in progress</a></li>
-                    <li><a href="#">complete</a></li>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section> <h1>here I'll include my bio</h1>
-            <h2>My objectives too</h2>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam facere temporibus at, eveniet dolorem incidunt totam quisquam numquam aut culpa maiores ex possimus tempora, aspernatur, corporis ad atque laboriosam fuga!</p></section>
-        <section></section>
-    </main>
-    <footer>
-        <nav>
-            <ul>
-                <li>google</li>
-                <li>Youtube</li>
-                <li>Facebook</li>
-                <li>instagram</li>  
-            </ul>
-        </nav>
+
+        <main>
+            <section>
+                <form id="form" action="/">
+                    <h1>Send Message</h1>
+                    <div class="inputcontrol">
+                        <label for="Email">Email</label>
+                        <input id="Email" name="Email" type="text">
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <label for="username">username</label>
+                        <input id="username" name="username" type="text">
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <label for="username">password</label>
+                        <input id="password" name="password" type="password">
+                        <div class="error"></div>
+                    </div>
+                    <div class="inputcontrol">
+                        <label for="password">password again</label>
+                        <input id="password" name="password" type="password">
+                        <div class="error"></div>
+                    </div>
+                    <button>submit</button>
+                </form>
+            </section>
+        </main>
     </footer>
    
 </body>
