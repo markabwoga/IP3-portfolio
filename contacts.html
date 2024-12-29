@@ -4,50 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacts</title>
+    <link rel="stylesheet" href="contacts.css">
 </head>
 <body>
-    <a href="index.html">Home</a>
-    <h1>contact</h1>
-    <nav>
-
+    <nav id="sidebar ">
+        <ul>
+            <li>
+                <span class="logo">DevsCrib</span>
+                <button id="toggle-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m242-200 200-280-200-280h98l200 280-200 280h-98Zm238 0 200-280-200-280h98l200 280-200 280h-98Z"/></svg>
+                </button>
+            </li>
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M240-200h120v-240h240v240h120v-360L480-740 240-560v360Zm-80 80v-480l320-240 320 240v480H520v-240h-80v240H160Zm320-350Z"/></svg>
+                    <span>HOME</span>
+                </a>
+                
+            </li>
+            <li>
+                <a href="index.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-120q-33 0-56.5-23.5T80-200v-440q0-33 23.5-56.5T160-720h160v-80q0-33 23.5-56.5T400-880h160q33 0 56.5 23.5T640-800v80h160q33 0 56.5 23.5T880-640v440q0 33-23.5 56.5T800-120H160Zm0-80h640v-440H160v440Zm240-520h160v-80H400v80ZM160-200v-440 440Z"/></svg>
+                    <span>About</span></a>
+                
+            </li>
+            <li>
+                <button class="dropdown-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-40-343 237-137-237-137-237 137 237 137ZM160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11L160-252Zm320-228Z"/></svg>
+                    <span>Projects</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-40-343 237-137-237-137-237 137 237 137ZM160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11L160-252Zm320-228Z"/></svg>
+                </button>
+                <ul class="submenu">
+                    <li><a href="#">first</a></li>
+                    <li><a href="#">first</a></li>
+                    <li><a href="#">first</a></li>
+                </ul>
+            </li>
+                <li>
+                    <button class="dropdown-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-40v-80h640v80H160Zm0-800v-80h640v80H160Zm320 400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm70-80q45-56 109-88t141-32q77 0 141 32t109 88h70v-480H160v480h70Zm118 0h264q-29-20-62.5-30T480-280q-36 0-69.5 10T348-240Zm132-280q-17 0-28.5-11.5T440-560q0-17 11.5-28.5T480-600q17 0 28.5 11.5T520-560q0 17-11.5 28.5T480-520Zm0 40Z"/></svg>
+                        <span>contacts</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-40-343 237-137-237-137-237 137 237 137ZM160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11L160-252Zm320-228Z"/></svg>
+                    </button>
+                    <ul class="submenu">
+                        <li><a href="#">WhatsApp</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </li>
+            </li>
+        </ul>
     </nav>
     <main>
-        <section>
-            <img src="pictures/linuxdark2.jpg" alt="" width="100%">
-            <h1>brief tittle</h1>
-            <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi sit recusandae eligendi provident, numquam esse dolorem amet omnis, vitae voluptatem, dignissimos doloribus. Veritatis voluptatum culpa, numquam corporis exercitationem maiores explicabo.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto corrupti culpa ipsum nostrum provident explicabo facere molestias suscipit ipsam, excepturi delectus aliquam unde sint rem repellendus eveniet tenetur eligendi beatae!</p>
-        </section>
-        <section>
-            <img src="pictures/IMG-20210315-WA0001.jpg" alt="" width="300" height="300">
-            <h1></h1>
-            <p></p>
-        </section>
-        <section>
-            <img src="pictures/IMG_20191130_075152_0-1.jpg" alt="" width="300">
-            <h1></h1>
-            <p></p>
-        </section>
-        <section>
-            <img src="pictures/IMG_20211226_131325.jpg" alt="">
-            <h1></h1>
-            <p></p>
-        </section>
-        <section>
-            <img src="pictures/background3.jpg" alt="">
-            <h1></h1>
-            <p></p>
-        </section>
-        <section>
-            <img src="pictures/linuxdark1.jpg" alt="">
-            <h1></h1>
-            <p></p>
-        </section>
-        <section>
-            <img src="pictures/IMG_20220703_170936.jpg" alt="">
-            <h1></h1>
-            <p></p>
-        </section>
+        <div class="container">
+            <h2>lets try this</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia quis libero culpa, tempore consequuntur inventore animi laborum! Numquam, qui nulla, aliquid amet assumenda exercitationem beatae veniam vel esse quibusdam quasi?
+            Qui, suscipit inventore beatae cumque quod quam modi voluptatem itaque corporis doloribus libero, aliquid sapiente eos ipsum saepe? Voluptatem perspiciatis error deserunt, sit doloremque ab nostrum! Eaque quae dignissimos alias.
+            Iusto nostrum alias suscipit, amet eaque tenetur cumque incidunt, voluptate vero eius ratione facilis nobis voluptatum voluptatibus aut soluta itaque earum necessitatibus quaerat vitae animi nesciunt aspernatur sequi. Corrupti, blanditiis.</p>
+        </div>
+        <div class="container">
+            <h2>lets try this</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia quis libero culpa, tempore consequuntur inventore animi laborum! Numquam, qui nulla, aliquid amet assumenda exercitationem beatae veniam vel esse quibusdam quasi?
+            Qui, suscipit inventore beatae cumque quod quam modi voluptatem itaque corporis doloribus libero, aliquid sapiente eos ipsum saepe? Voluptatem perspiciatis error deserunt, sit doloremque ab nostrum! Eaque quae dignissimos alias.
+            Iusto nostrum alias suscipit, amet eaque tenetur cumque incidunt, voluptate vero eius ratione facilis nobis voluptatum voluptatibus aut soluta itaque earum necessitatibus quaerat vitae animi nesciunt aspernatur sequi. Corrupti, blanditiis.</p>
+        </div>
+        <div class="container">
+            <h2>lets try this</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quia quis libero culpa, tempore consequuntur inventore animi laborum! Numquam, qui nulla, aliquid amet assumenda exercitationem beatae veniam vel esse quibusdam quasi?
+            Qui, suscipit inventore beatae cumque quod quam modi voluptatem itaque corporis doloribus libero, aliquid sapiente eos ipsum saepe? Voluptatem perspiciatis error deserunt, sit doloremque ab nostrum! Eaque quae dignissimos alias.
+            Iusto nostrum alias suscipit, amet eaque tenetur cumque incidunt, voluptate vero eius ratione facilis nobis voluptatum voluptatibus aut soluta itaque earum necessitatibus quaerat vitae animi nesciunt aspernatur sequi. Corrupti, blanditiis.</p>
+        </div>
     </main>
 </body>
 </html>
