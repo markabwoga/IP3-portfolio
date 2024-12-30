@@ -11,7 +11,7 @@
         <ul>
             <li>
                 <span class="logo">DevsCrib</span>
-                <button id="toggle-btn">
+                <button onclick=toggleSidebar() id="toggle-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m242-200 200-280-200-280h98l200 280-200 280h-98Zm238 0 200-280-200-280h98l200 280-200 280h-98Z"/></svg>
                 </button>
             </li>
@@ -32,7 +32,8 @@
                 <button onclick=toggleSubmenu(this) class="dropdown-btn">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M440-183v-274L200-596v274l240 139Zm80 0 240-139v-274L520-457v274Zm-40-343 237-137-237-137-237 137 237 137ZM160-252q-19-11-29.5-29T120-321v-318q0-22 10.5-40t29.5-29l280-161q19-11 40-11t40 11l280 161q19 11 29.5 29t10.5 40v318q0 22-10.5 40T800-252L520-91q-19 11-40 11t-40-11L160-252Zm320-228Z"/></svg>
                     <span>Projects</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360 280-560h400L480-360Z"/></svg>                </button>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360 280-560h400L480-360Z"/></svg>
+                </button>
                 <ul class="submenu">
                     <div>
                         <li><a href="#">first</a></li>
@@ -46,7 +47,8 @@
                     <button onclick=toggleSubmenu(this) class="dropdown-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M160-40v-80h640v80H160Zm0-800v-80h640v80H160Zm320 400q50 0 85-35t35-85q0-50-35-85t-85-35q-50 0-85 35t-35 85q0 50 35 85t85 35ZM160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm70-80q45-56 109-88t141-32q77 0 141 32t109 88h70v-480H160v480h70Zm118 0h264q-29-20-62.5-30T480-280q-36 0-69.5 10T348-240Zm132-280q-17 0-28.5-11.5T440-560q0-17 11.5-28.5T480-600q17 0 28.5 11.5T520-560q0 17-11.5 28.5T480-520Zm0 40Z"/></svg>
                         <span>contacts</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360 280-560h400L480-360Z"/></svg>                    </button>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M480-360 280-560h400L480-360Z"/></svg>
+                    </button>
                     <ul class="submenu">
                         <div>
                             <li><a href="#">WhatsApp</a></li>
@@ -79,9 +81,30 @@
         </div>
     </main>
 <script>
+    const toggleButton = document.getElementById('toggle-btn')
+    const sidebar = document.getElementById('sidebar')
+
+     function toggleSidebar(){
+        sidebar.classList.toggle('close')
+        toggleButton.classList.toggle('rotate')
+    
+        Array.from(sidebar.getElementsByClassName('show')).forEach(ul => {
+            ul.classList.remove('show')
+            ul.previousElementSibling.classList.remove('rotate')
+
+        })
+     }
+
+     if(sidebar.classList('close')){
+        sidebar.classList.toggle('close')
+        togglebutton.classList.toggle('rotate')
+     }
     function toggleSubmenu(button){
-        button.nextElementSibling.classList.toggle('show')
-    }
+        button.nextElementSibling.classList.toggle('show');
+        button.classList.toggle('rotate');
+    };
+
+    
 </script>
 </body>
 </html>

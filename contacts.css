@@ -27,6 +27,13 @@ body{
     position: sticky;
     top: 0;
     align-self: start;
+    transition: 300ms ease-in-out;
+    overflow: hidden;
+    text-wrap: nowrap;
+}
+#sidebar.close{
+    padding: 5px;
+    width: 60px;
 }
 #sidebar ul{
     list-style: none;
@@ -83,10 +90,30 @@ body{
 }
 #sidebar .submenu.show{ 
     grid-template-rows: 1fr;
+    transition: 200ms ease;
 
 }
+.rotate svg:last-child{
+    rotate: 180deg;
+}
+#sidebar .submenu a{
+    padding-left: 4em;
+}
+#toggle-btn{
+    margin-left: auto;
+    padding: 1em;
+    border: none;
+    border-radius: .5em;
+    background: none;
+    cursor: pointer;
 
-
+    svg{
+        transition: rotate 150ms ease;
+    }
+}
+#toggle-btn:hover{
+    background-color: var(--hover-color);
+}
 
 
 
