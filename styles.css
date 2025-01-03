@@ -232,3 +232,40 @@ nav li:first-child{
     outline: 0;
     
 }
+/*accordion styling*/
+.accordion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 500px;
+    margin: 30px;
+
+}
+/*accordion item*/
+.accordion-item{
+    border: solid black;
+    margin-bottom: 5px;
+    
+   
+  
+
+}
+/*accordion hader*/
+.accordion-header{
+    background-color: black;
+    color: white;
+    border-bottom: solid black;
+    height: 30px;
+    line-height: 30px;
+
+}
+/*accordion content*/
+.accordion-content{
+    display: none;
+    background-color: gray;
+    padding: 15px;
+
+}
+.accordion-content.active{
+    display: block;
+}

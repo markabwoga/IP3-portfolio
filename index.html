@@ -38,10 +38,32 @@
                 <h3>Field of Study: <span>Software Developer.</span></h3>
                 <p>Welcome to my portfolio, am a liberal person, always ready to learn and improve myself in terms of skills and how I interact with people around me. I am builing this in the hopes that I interact and build good relationship with those that have been and still are in this same field of work before me, for we all know that the path to becoming an expert as a dev requires determination, endurance and a lot of practice and one should never be afraid to fail several times as my mentor puts it. </p>
             </div>
-            <div class="btndiv">
-                <button class="infobtn">follow</button>
-                <button class="infobtn">contacts</button>
-            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header"><h4>first item</h4></div>
+                    <div class="accordion-content">
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header"><h4>second item</h4></div>
+                    <div class="accordion-content">
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header"><h4>third item</h4></div>
+                    <div class="accordion-content">
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                        <p>accordion practice section, let us try and hide the content after we have selected another item</p>
+                    </div>
+                </div>
+             </div>
         </section>
     </main>
     <footer>
@@ -76,6 +98,7 @@
     </footer>
 
    <script>
+    //sidebar or the nav script
     function showSidebar(){
         const sidebar = document.querySelector('.sidebar')
         sidebar.style.display = 'flex'
@@ -86,6 +109,7 @@
     };
 
 
+//mode script
 
     let darkMode = localStorage.getItem('.darkMode')
     const toggle = document.querySelector('.toggle');
@@ -109,6 +133,22 @@
          
     });
 
+     //my accordion script
+    const accordionHeader = document.querySelectorAll('.accordion-header');
+    const accordionContent = document.querySelectorAll('.accordion-content');
+
+    accordionHeader.forEach((header) => {
+        header.addEventListener('click', () =>{
+            const accordionItem = header.parentElement;
+            const accordionContent = accordionItem.querySelector('.accordion-content');
+
+            accordionContent.classList.toggle("active");
+
+          //  if (accordionContent.classList.contains("active")){
+
+          //  }
+        })
+    })
    </script>  
 </body>
 </html>
